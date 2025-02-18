@@ -1,0 +1,70 @@
+/* Styling for the Edit Expense container */
+.edit-expense-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  .edit-expense-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Input field styling */
+  .edit-expense-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .edit-expense-container input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  .edit-expense-container input[type="number"]::-webkit-outer-spin-button,
+  .edit-expense-container input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .edit-expense-container input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Button styling */
+  .edit-expense-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-expense-container button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Error message styling */
+  .edit-expense-container p {
+    color: #f44336;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  

@@ -1,0 +1,80 @@
+/* Styling for the View Expenses container */
+.view-expenses-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  .view-expenses-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for each expense card */
+  .expense-card {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .expense-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .expense-card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .expense-card p.date {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  /* Button group styling */
+  .expense-actions {
+    margin-top: 10px;
+  }
+  
+  .expense-actions button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .expense-actions .btn-edit {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .expense-actions .btn-edit:hover {
+    background-color: #45a049;
+  }
+  
+  .expense-actions .btn-delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .expense-actions .btn-delete:hover {
+    background-color: #e53935;
+  }
+  
