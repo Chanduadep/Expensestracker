@@ -8,7 +8,7 @@ export const addExpense = async (req, res) => {
       description,
       amount,
       date,
-      userId: req.userId, // user ID from the token
+      userId: req.userId, 
     });
 
     await newExpense.save();
