@@ -17,6 +17,7 @@ const EditExpense = () => {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
         });
+        console.log(response.data); 
         setFormData(response.data);
       } catch (error) {
         setError('Failed to fetch expense');
@@ -32,10 +33,12 @@ const EditExpense = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Updating Expense with Data:", formData);
     try {
       await axios.put(`http://localhost:5000/api/expenses/${id}`, formData, {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
+          'Authorization': `Bearer ${localStorage.getItem('token')}`,
+          'Content-Type': 'application/json'
         }
       });
       navigate('/view-expenses');

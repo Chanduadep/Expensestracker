@@ -1,4 +1,3 @@
-/* Styling for the Dashboard container */
 .dashboard-container {
     width: 100%;
     max-width: 600px;
@@ -11,14 +10,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Styling for the heading */
   .dashboard-heading {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
   }
-  
-  /* Styling for the buttons */
   .dashboard-button {
     display: inline-block;
     padding: 12px 20px;
@@ -35,6 +31,5 @@
   .dashboard-button:hover {
     background-color: #45a049;
   }
-  
-  /* You can style other elements like loading states, etc. */
+
   
