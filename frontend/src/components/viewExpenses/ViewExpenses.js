@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/view.css'
+import '../viewExpenses/view.css';
+import Navbar from '../navbar/Navbar';
+import { toast } from 'react-toastify';
 
 const ViewExpenses = () => {
   const [expenses, setExpenses] = useState([]);
@@ -11,14 +13,14 @@ const ViewExpenses = () => {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/expenses', {
+        const response = await axios.get(`http://localhost:5000/api/expenses`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           },
         });
         setExpenses(response.data);
       } catch (error) {
-        setError('Failed to load expenses');
+        // setError('Failed to load expenses');
       }
     };
     fetchExpenses();
@@ -36,12 +38,15 @@ const ViewExpenses = () => {
         },
       });
       setExpenses(expenses.filter(expense => expense._id !== expenseId));
+      toast.success("Expense Deleted successfully")
     } catch (error) {
       setError('Failed to delete expense');
     }
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="view-expenses-container">
       <h2 className="view-expenses-heading">View Expenses</h2>
       {error && <p className="error-message">{error}</p>}
@@ -61,6 +66,7 @@ const ViewExpenses = () => {
         ))
       )}
     </div>
+    </>
   );
 };
 

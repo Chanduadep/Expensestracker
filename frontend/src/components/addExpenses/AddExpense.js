@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../styles/add.css'
+import '../addExpenses/add.css'
+import Navbar from '../navbar/Navbar';
+import {  toast } from 'react-toastify';
+
 
 const AddExpense = () => {
+    
   const [formData, setFormData] = useState({ description: '', amount: '', date: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -20,6 +24,7 @@ const AddExpense = () => {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
       });
+      toast.success("Expenses added successfully")
       navigate('/view-expenses');
     } catch (error) {
       setError('Failed to add expense');
@@ -27,6 +32,8 @@ const AddExpense = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="add-expense-container">
       <h2 className="add-expense-heading">Add Expense</h2>
       {error && <p className="error-message">{error}</p>}
@@ -59,6 +66,7 @@ const AddExpense = () => {
         </button>
       </form>
     </div>
+    </>
   );
 };
   

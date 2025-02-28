@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
-import '../styles/edit.css'
+import '../editExpense/edit.css';
+import { toast } from 'react-toastify';
+import Navbar from '../navbar/Navbar';
 
 const EditExpense = () => {
   const { id } = useParams();
@@ -41,6 +43,7 @@ const EditExpense = () => {
           'Content-Type': 'application/json'
         }
       });
+      toast.success("expenses updated successfully")
       navigate('/view-expenses');
     } catch (error) {
       setError('Failed to update expense');
@@ -48,6 +51,8 @@ const EditExpense = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="edit-expense-container">
       <h2 className="edit-expense-heading">Edit Expense</h2>
       {error && <p>{error}</p>}
@@ -75,6 +80,7 @@ const EditExpense = () => {
         <button type="submit">Update Expense</button>
       </form>
     </div>
+    </>
   );
 };
 

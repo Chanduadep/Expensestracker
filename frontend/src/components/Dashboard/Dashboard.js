@@ -1,11 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/dashboard.css';
+import '../Dashboard/dashboard.css';
+import Navbar from '../navbar/Navbar';
 
 const Dashboard = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+    <Navbar/>
     <div className="dashboard-container">
     <h2 className="dashboard-heading">Dashboard</h2>
     <button className="dashboard-button" onClick={() => navigate('/add-expense')}>
@@ -15,6 +18,7 @@ const Dashboard = () => {
       View Expenses
     </button>
   </div>
+  </>
   );
 };
 

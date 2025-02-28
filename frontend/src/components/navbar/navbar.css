@@ -1,0 +1,30 @@
+.nav{
+    height: 50px;
+    background-color: rgb(0, 255, 128);
+    border: 2px ;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.expense-name{
+    color: rgb(68, 65, 65);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 20px;
+    margin-left: 18px;  
+    margin-right: 18px;
+    margin-top: 5px;
+
+}
+.expense-name button{
+    width: 50px;
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+    background: none;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-right: 28px;
+}
+
